@@ -1,0 +1,241 @@
+/* TodayPlanCard CSS - Modern SaaS Light Theme */
+.today-plan-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.today-plan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.plan-icon-tag {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--primary-light-border);
+}
+
+.plan-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plan-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.plan-date-pill {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--primary-light-border);
+}
+
+.plan-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.1rem 0 0 0;
+}
+
+.plan-reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.plan-reset-btn:hover {
+  background: #F1F5F9;
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+/* Progress Block */
+.plan-progress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.plan-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.plan-progress-stats {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.plan-progress-percent {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.plan-progress-track {
+  width: 100%;
+  height: 6px;
+  background: #E2E8F0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.plan-progress-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+}
+
+/* Banner */
+.plan-completed-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #059669;
+  padding: 0.6rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  font-weight: 600;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Tasks */
+.plan-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.plan-task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.plan-task-item:hover {
+  background: #FFFFFF;
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-xs);
+}
+
+.plan-task-item.completed {
+  background: #F8FAFC;
+  border-color: var(--border);
+  opacity: 0.85;
+}
+
+.plan-checkbox-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.plan-checkbox-btn:hover {
+  color: #059669;
+}
+
+.checkbox-icon.checked {
+  color: #059669;
+}
+
+.plan-task-label-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.plan-task-text {
+  font-size: 0.86rem;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.plan-task-item.completed .plan-task-text {
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.plan-task-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #E2E8F0;
+  color: var(--text-muted);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.plan-jump-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.plan-jump-btn:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light-border);
+  color: var(--primary);
+  transform: translateX(1px);
+}

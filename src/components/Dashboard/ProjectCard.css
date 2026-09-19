@@ -1,0 +1,172 @@
+/* ==========================================================================
+   PROJECT CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.project-status-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.project-status-pill.in-progress {
+  background: var(--accent-purple-light);
+  color: #7C3AED;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.project-meta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-stack-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.stack-icon {
+  color: var(--primary);
+}
+
+.project-stage-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: #F1F5F9;
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+/* Progress Block */
+.project-progress-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.project-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-progress-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.p-progress-pct {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.p-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.p-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7C3AED 0%, #4F46E5 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-timeline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.deadline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #D97706;
+  font-weight: 600;
+}
+
+.tasks-count-label {
+  color: var(--text-muted);
+}
+
+/* Browser Preview Mock */
+.project-preview-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.browser-mock-bar {
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--border);
+  padding: 0.45rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.browser-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.b-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.b-dot.red { background: #EF4444; }
+.b-dot.yellow { background: #F59E0B; }
+.b-dot.green { background: #10B981; }
+
+.browser-url {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.browser-mock-content {
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mock-site-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.mock-site-badge {
+  font-size: 0.7rem;
+  background: var(--accent-emerald-light);
+  color: #059669;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}

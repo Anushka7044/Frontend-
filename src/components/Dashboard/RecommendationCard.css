@@ -1,0 +1,139 @@
+/* ==========================================================================
+   RECOMMENDATION CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.recommend-badge {
+  background: var(--primary-light);
+  border: 1px solid var(--primary-light-border);
+  color: var(--primary);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.recommend-hero-box {
+  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+  border: 1px solid #C7D2FE;
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.recommend-hero-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.recommend-skill-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.recommend-tagline {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.recommend-status-pill {
+  font-size: 0.68rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.recommend-reason-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+}
+
+.reason-check-icon {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.recommend-reason-text {
+  font-size: 0.8rem;
+  color: #065F46;
+  margin: 0;
+  font-weight: 500;
+}
+
+.recommend-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.65rem;
+}
+
+.spec-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 0.75rem;
+}
+
+.spec-box.full-width {
+  grid-column: span 2;
+}
+
+.spec-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.spec-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.spec-val {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.recommend-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.topics-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.topics-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.topic-pill {
+  font-size: 0.72rem;
+  background: #F1F5F9;
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-weight: 500;
+}

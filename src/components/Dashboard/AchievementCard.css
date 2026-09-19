@@ -1,0 +1,147 @@
+/* ==========================================================================
+   ACHIEVEMENT CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.achieve-tier-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  background: var(--accent-amber-light);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-full);
+}
+
+.achievements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.achievement-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 0.85rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.achievement-item-row:hover {
+  background: #F8FAFC;
+  border-color: var(--border-hover);
+  transform: translateX(2px);
+  box-shadow: var(--shadow-xs);
+}
+
+.badge-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.achievement-item-row:hover .badge-icon-box {
+  transform: scale(1.06);
+}
+
+.badge-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.badge-name-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.badge-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.badge-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.badge-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.badge-verified-tag {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+/* Modal Bubble Preview */
+.badge-quick-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.badge-modal-bubble {
+  max-width: 340px;
+  width: 100%;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+}
+
+.badge-bubble-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  color: #D97706;
+  font-weight: 700;
+}
+
+.badge-modal-bubble h5 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.badge-modal-bubble p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+}
+
+.badge-issue-time {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}

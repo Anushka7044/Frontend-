@@ -1,0 +1,193 @@
+/* ==========================================================================
+   STREAK CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.streak-rank-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #FFF7ED;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+  color: #EA580C;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.streak-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.streak-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.streak-box.active-streak {
+  background: #FFF7ED;
+  border-color: rgba(234, 88, 12, 0.3);
+}
+
+.streak-box-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.streak-box-val {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.big-streak-num {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.streak-unit {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.flame-pulse {
+  color: #EA580C;
+}
+
+.trophy-icon {
+  color: #D97706;
+}
+
+.calendar-icon {
+  color: #0284C7;
+}
+
+.streak-box-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Heatmap */
+.heatmap-container {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.heatmap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.heatmap-title {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.heatmap-legend {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.legend-cell {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.heatmap-days-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+
+.heatmap-day-label {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.heatmap-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heatmap-week-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.heatmap-cell {
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.12);
+}
+
+.intensity-none {
+  background: #E2E8F0;
+  border: 1px solid #CBD5E1;
+}
+
+.intensity-low {
+  background: #FED7AA;
+  border: 1px solid #FDBA74;
+}
+
+.intensity-med {
+  background: #FB923C;
+  border: 1px solid #F97316;
+}
+
+.intensity-high {
+  background: #EA580C;
+  border: 1px solid #C2410C;
+}
+
+.heatmap-tooltip-bar {
+  min-height: 22px;
+  font-size: 0.75rem;
+  color: var(--primary);
+  background: var(--primary-light);
+  border: 1px solid var(--primary-light-border);
+  border-radius: var(--radius-sm);
+  padding: 0.25rem 0.6rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .streak-metrics-row {
+    grid-template-columns: 1fr;
+  }
+}

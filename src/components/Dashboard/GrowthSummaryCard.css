@@ -1,0 +1,88 @@
+/* ==========================================================================
+   GROWTH SUMMARY CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.growth-level-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--primary-light-border);
+  border-radius: var(--radius-full);
+}
+
+.growth-metrics-tally {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.65rem;
+}
+
+.growth-tally-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.growth-tally-box:hover {
+  transform: translateY(-2px);
+  background: #FFFFFF;
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-xs);
+}
+
+.tally-val {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.tally-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.growth-quote-banner {
+  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
+  border: 1px solid #C7D2FE;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.quote-icon {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.quote-text {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-main);
+  margin: 0;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+@media (max-width: 860px) {
+  .growth-metrics-tally {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .growth-metrics-tally {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

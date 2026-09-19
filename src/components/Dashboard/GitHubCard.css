@@ -1,0 +1,268 @@
+/* ==========================================================================
+   GITHUB CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.demo-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.demo-toggle-btn:hover {
+  background: #F1F5F9;
+  color: var(--text-main);
+  border-color: var(--border-hover);
+}
+
+.github-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.github-stat-item {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.g-stat-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.g-stat-val-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.g-icon {
+  color: #0284C7;
+}
+
+.g-icon.orange {
+  color: #EA580C;
+}
+
+.g-icon.purple {
+  color: #7C3AED;
+}
+
+.g-stat-num {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.g-stat-unit {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.g-stat-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Language Breakdown */
+.language-breakdown-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.lang-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+}
+
+.lang-title {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.lang-primary-badge {
+  color: #D97706;
+  font-weight: 700;
+}
+
+.lang-segmented-bar {
+  width: 100%;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: var(--radius-full);
+  display: flex;
+  overflow: hidden;
+}
+
+.lang-segment {
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+.lang-legend-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.lang-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+}
+
+.lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+}
+
+.lang-name-text {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.lang-pct-text {
+  color: var(--text-muted);
+}
+
+/* Commits Feed */
+.recent-commits-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.commits-box-title {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.commits-mini-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.commit-feed-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.75rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  transition: all var(--transition-fast);
+}
+
+.commit-feed-item:hover {
+  background: #F8FAFC;
+  border-color: var(--border-hover);
+}
+
+.commit-icon {
+  color: #0284C7;
+  flex-shrink: 0;
+}
+
+.commit-info {
+  flex: 1;
+  display: flex;
+  gap: 0.4rem;
+  overflow: hidden;
+}
+
+.commit-repo {
+  color: var(--primary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.commit-msg {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.commit-time {
+  font-size: 0.72rem;
+  color: var(--text-subtle);
+  white-space: nowrap;
+}
+
+/* Empty State */
+.github-empty-state {
+  padding: 1.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #F8FAFC;
+  border: 1px dashed var(--border-hover);
+  border-radius: var(--radius-md);
+  gap: 0.75rem;
+}
+
+.empty-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: #E2E8F0;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-state-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.empty-state-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  max-width: 320px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .github-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

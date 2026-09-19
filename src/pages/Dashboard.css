@@ -1,0 +1,390 @@
+/* ==========================================================================
+   DASHBOARD PAGE & GRID LAYOUT - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.dashboard-app-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-secondary);
+  overflow: hidden;
+  position: relative;
+}
+
+.dashboard-main-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--bg-canvas);
+}
+
+.dashboard-content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 1.75rem 2rem 3rem 2rem;
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+.dashboard-content-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-content-scroll::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+
+.dashboard-content-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Quick Statistics Grid (6 Cards) */
+.stats-section-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+/* Main Dashboard Cards 2-Column Grid */
+.dashboard-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.grid-card-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Prevent flex/grid item blowout */
+}
+
+.grid-card-item.full-span {
+  grid-column: span 2;
+}
+
+/* ==========================================================================
+   AI GROWTH ASSISTANT DASHBOARD BANNER
+   ========================================================================== */
+
+.dashboard-ai-banner {
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #EEF2FF 0%, #FAF5FF 100%);
+  border: 1px solid #C7D2FE;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.dashboard-ai-banner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ai-banner-title-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ai-banner-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+  flex-shrink: 0;
+}
+
+.ai-banner-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ai-banner-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.ai-banner-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #059669;
+  background: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.ai-banner-subtitle {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin: 0.15rem 0 0 0;
+}
+
+.dashboard-ai-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem;
+}
+
+.ai-focus-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.65rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  box-shadow: var(--shadow-xs);
+}
+
+.ai-focus-card:hover {
+  border-color: #C7D2FE;
+  background: #FFFFFF;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.ai-focus-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ai-focus-category {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.04em;
+}
+
+.ai-focus-text {
+  font-size: 0.84rem;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin: 0;
+  font-weight: 500;
+}
+
+.ai-focus-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.76rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   CAREER PROGRESS DASHBOARD SECTION
+   ========================================================================== */
+
+.career-progress-dashboard-card {
+  padding: 1.75rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.career-progress-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.card-icon-tag {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
+}
+
+.card-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.career-progress-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.career-metric-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: all var(--transition-fast);
+}
+
+.career-metric-box:hover {
+  border-color: var(--border-hover);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-xs);
+}
+
+.career-metric-lbl {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.career-metric-val {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  font-family: var(--font-heading);
+}
+
+.career-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.career-quick-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  .stats-section-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-content-scroll {
+    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .career-progress-metrics-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-ai-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-card-item.full-span {
+    grid-column: span 1;
+  }
+
+  .stats-section-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.85rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .stats-section-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .dashboard-content-scroll {
+    padding: 1rem 1rem 3.5rem 1rem;
+  }
+
+  .dashboard-content-inner {
+    gap: 1.25rem;
+  }
+
+  .dashboard-ai-banner {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .career-progress-metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-ai-items-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section-grid {
+    grid-template-columns: 1fr;
+  }
+}

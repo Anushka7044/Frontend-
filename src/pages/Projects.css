@@ -1,0 +1,511 @@
+/* Projects Page Styling - Modern SaaS Light Theme */
+.projects-page-container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Page Header */
+.projects-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.projects-title-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.projects-header-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--accent-purple-light);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: #7C3AED;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.projects-page-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.projects-page-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* 4 Statistics Cards */
+.projects-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.project-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--transition-fast);
+}
+
+.project-stat-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.p-stat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.p-stat-icon-wrapper.purple {
+  background: var(--accent-purple-light);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: #7C3AED;
+}
+
+.p-stat-icon-wrapper.amber {
+  background: var(--accent-amber-light);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  color: #D97706;
+}
+
+.p-stat-icon-wrapper.cyan {
+  background: var(--accent-sky-light);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  color: #0284C7;
+}
+
+.p-stat-icon-wrapper.emerald {
+  background: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #059669;
+}
+
+.p-stat-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.p-stat-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* Tabs Filter Bar */
+.projects-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.projects-tabs-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #FFFFFF;
+  padding: 0.3rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
+  flex-wrap: wrap;
+}
+
+.project-tab-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-tab-btn:hover {
+  color: var(--text-main);
+  background: #F8FAFC;
+}
+
+.project-tab-btn.active {
+  background: var(--accent-purple-light);
+  color: #7C3AED;
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+/* Projects Cards Grid */
+.projects-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual Project Card */
+.project-item-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-item-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.project-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.p-skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  background: var(--accent-purple-light);
+  color: #7C3AED;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.p-status-pill {
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.p-status-pill.assigned {
+  background: #F1F5F9;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.p-status-pill.in_progress {
+  background: var(--accent-amber-light);
+  color: #D97706;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.p-status-pill.submitted {
+  background: var(--accent-sky-light);
+  color: #0284C7;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+}
+
+.p-status-pill.completed {
+  background: var(--accent-emerald-light);
+  color: #059669;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.project-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.project-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta Bar */
+.project-card-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.p-meta-deadline {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #D97706;
+  font-weight: 600;
+}
+
+/* Milestone Pipeline Bar */
+.milestones-pipeline-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin: 1.5rem 0;
+  padding: 0 0.5rem;
+}
+
+.milestones-pipeline-track::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: #E2E8F0;
+  z-index: 1;
+}
+
+.milestone-node {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.m-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 2px solid #CBD5E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.milestone-node.completed .m-circle {
+  background: #059669;
+  border-color: #059669;
+  color: #FFFFFF;
+}
+
+.milestone-node.active .m-circle {
+  background: #7C3AED;
+  border-color: #7C3AED;
+  color: #FFFFFF;
+}
+
+.milestone-node.active span {
+  color: #7C3AED;
+  font-weight: 700;
+}
+
+/* Requirements Checklist in Detail Modal */
+.requirements-checklist-section {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.req-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.req-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.req-checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.req-interactive-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.req-interactive-row:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-xs);
+}
+
+.req-interactive-row.completed {
+  background: #F8FAFC;
+  border-color: var(--border);
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+/* Submitted Proof Box */
+.submitted-proof-box {
+  background: var(--accent-sky-light);
+  border: 1px solid rgba(2, 132, 199, 0.25);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.proof-header {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #0284C7;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.proof-link-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.proof-link {
+  color: var(--primary);
+  text-decoration: underline;
+  word-break: break-all;
+  font-weight: 600;
+}
+
+.proof-learned-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Congratulations Banner after project completion */
+.project-congrats-banner {
+  background: var(--accent-emerald-light);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.congrats-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #059669;
+  margin-bottom: 0.5rem;
+}
+
+.congrats-sub {
+  font-size: 0.92rem;
+  color: var(--text-main);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto 1.25rem;
+}
+
+.next-step-recommend-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projects-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-page-container {
+    padding: 1.25rem 1rem 2.5rem;
+  }
+  .projects-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .milestones-pipeline-track {
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+}

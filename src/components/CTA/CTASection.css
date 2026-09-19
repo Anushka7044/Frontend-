@@ -1,0 +1,72 @@
+/* ==========================================================================
+   CTA SECTION STYLING (Modern Light SaaS Theme)
+   ========================================================================== */
+
+.cta-section {
+  padding-bottom: 7rem;
+}
+
+.cta-card {
+  position: relative;
+  padding: 5rem 3rem;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 50%, #E0F2FE 100%);
+  border: 1px solid #C7D2FE;
+  box-shadow: 0 20px 40px -15px rgba(79, 70, 229, 0.15);
+}
+
+.cta-glow-effect {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 80%);
+  pointer-events: none;
+}
+
+.cta-badge {
+  margin-bottom: 1.5rem;
+}
+
+.cta-title {
+  font-size: 2.85rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.cta-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  margin: 0 auto 2.5rem auto;
+  line-height: 1.65;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .cta-card {
+    padding: 3rem 1.5rem;
+  }
+  .cta-title {
+    font-size: 2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}

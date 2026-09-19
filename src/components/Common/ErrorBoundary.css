@@ -1,0 +1,51 @@
+/* ErrorBoundary CSS (Modern Light SaaS Theme) */
+.error-boundary-card {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #FEF2F2;
+  border: 1px solid #FECACA;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.error-boundary-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #FEE2E2;
+  color: #DC2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.error-boundary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.error-boundary-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #991B1B;
+  margin: 0;
+}
+
+.error-boundary-desc {
+  font-size: 0.85rem;
+  color: #B91C1C;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.error-boundary-reset-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.25rem;
+}

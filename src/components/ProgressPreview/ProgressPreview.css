@@ -1,0 +1,311 @@
+/* ==========================================================================
+   PROGRESS PREVIEW SECTION STYLING (Modern Light SaaS Theme)
+   ========================================================================== */
+
+.progress-preview-section {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.preview-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.preview-card {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.preview-card:hover {
+  transform: translateY(-3px);
+  border-color: #C7D2FE;
+  box-shadow: var(--shadow-md);
+}
+
+.card-header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.card-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-subtle);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.card-badge-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-badge-icon.blue { background: #EFF6FF; color: #2563EB; }
+.card-badge-icon.orange { background: #FFF7ED; color: #EA580C; }
+.card-badge-icon.purple { background: #FAF5FF; color: #9333EA; }
+.card-badge-icon.yellow { background: #FEFCE8; color: #CA8A04; }
+
+/* Skills bars */
+.skills-bar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.skill-meter-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.skill-title {
+  color: var(--text-main);
+}
+
+.skill-percent {
+  color: var(--text-muted);
+}
+
+.meter-track {
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.meter-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.8s ease;
+}
+
+.card-note {
+  font-size: 0.78rem;
+  color: var(--text-subtle);
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* Streak Display */
+.streak-main-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.streak-number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #EA580C;
+}
+
+.streak-unit {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.streak-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.streak-stat-box {
+  padding: 0.85rem 1rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.box-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.box-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.heatmap-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.heatmap-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.heatmap-grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 4px;
+}
+
+.heatmap-cell {
+  aspect-ratio: 1;
+  border-radius: 3px;
+}
+
+.heatmap-cell.level-1 { background: #F1F5F9; border: 1px solid #E2E8F0; }
+.heatmap-cell.level-2 { background: #FED7AA; }
+.heatmap-cell.level-3 { background: #F97316; }
+
+/* Projects Card */
+.projects-metrics-box {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.p-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-num {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #059669;
+  line-height: 1.1;
+}
+
+.p-num.in-progress {
+  color: #0284C7;
+}
+
+.p-text {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.project-mini-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-mini-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+
+.p-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.p-name {
+  flex-grow: 1;
+}
+
+.p-tag {
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: #F1F5F9;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+/* Badges Card */
+.badges-count-banner {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.badge-big-number {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: #D97706;
+  line-height: 1;
+}
+
+.badge-big-label {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.badges-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.badge-item-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.85rem;
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.badge-icon-gold { color: #D97706; }
+.badge-icon-orange { color: #EA580C; }
+.badge-icon-cyan { color: #0284C7; }
+.badge-icon-emerald { color: #059669; }
+
+.unlock-all-btn {
+  margin-top: auto;
+}
+
+@media (max-width: 900px) {
+  .preview-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+}

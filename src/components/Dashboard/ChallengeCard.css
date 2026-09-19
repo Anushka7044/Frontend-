@@ -1,0 +1,161 @@
+/* ==========================================================================
+   CHALLENGE CARD STYLES - MODERN SAAS LIGHT THEME
+   ========================================================================== */
+
+.challenge-streak-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #FFF7ED;
+  border: 1px solid rgba(234, 88, 12, 0.25);
+  color: #EA580C;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.streak-flame {
+  color: #EA580C;
+}
+
+.challenge-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.challenge-metric-item {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.c-metric-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+}
+
+.c-metric-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.challenge-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.challenge-track {
+  width: 100%;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.challenge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #F59E0B 0%, #EA580C 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.challenge-bar-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* Daily Tasks Box */
+.daily-tasks-box {
+  background: #F8FAFC;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.daily-tasks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.daily-tasks-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.daily-tasks-sub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.tasks-interactive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.task-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+  color: var(--text-main);
+}
+
+.task-checkbox-item:hover {
+  border-color: var(--border-hover);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-xs);
+}
+
+.task-checkbox-item.completed {
+  background: #F8FAFC;
+  border-color: var(--border);
+}
+
+.task-checkbox-item.completed .task-text {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-icon {
+  color: var(--text-subtle);
+  flex-shrink: 0;
+}
+
+.task-icon.checked {
+  color: #059669;
+}
+
+.task-text {
+  font-size: 0.82rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.challenge-cta-row {
+  margin-top: 0.25rem;
+}
