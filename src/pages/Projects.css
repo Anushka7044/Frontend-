@@ -59,7 +59,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -82,27 +82,27 @@
 }
 
 .p-stat-icon-wrapper.purple {
-  background: var(--accent-purple-light);
-  border: 1px solid rgba(124, 58, 237, 0.25);
-  color: #7C3AED;
+  background: rgba(136, 117, 255, 0.15);
+  border: 1px solid rgba(136, 117, 255, 0.25);
+  color: var(--primary);
 }
 
 .p-stat-icon-wrapper.amber {
-  background: var(--accent-amber-light);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #D97706;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  color: #FBBF24;
 }
 
 .p-stat-icon-wrapper.cyan {
-  background: var(--accent-sky-light);
-  border: 1px solid rgba(2, 132, 199, 0.25);
-  color: #0284C7;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #38BDF8;
 }
 
 .p-stat-icon-wrapper.emerald {
-  background: var(--accent-emerald-light);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  color: #059669;
+  background: rgba(64, 217, 194, 0.12);
+  border: 1px solid rgba(64, 217, 194, 0.25);
+  color: #40D9C2;
 }
 
 .p-stat-label {
@@ -135,7 +135,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: #FFFFFF;
+  background: #14192D;
   padding: 0.3rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -160,13 +160,14 @@
 
 .project-tab-btn:hover {
   color: var(--text-main);
-  background: #F8FAFC;
+  background: #1C233C;
 }
 
 .project-tab-btn.active {
-  background: var(--accent-purple-light);
-  color: #7C3AED;
-  border-color: rgba(124, 58, 237, 0.3);
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(136, 117, 255, 0.3);
 }
 
 /* Projects Cards Grid */
@@ -182,7 +183,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -321,8 +322,8 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #FFFFFF;
-  border: 2px solid #CBD5E1;
+  background: #14192D;
+  border: 2px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,25 +333,25 @@
 }
 
 .milestone-node.completed .m-circle {
-  background: #059669;
-  border-color: #059669;
-  color: #FFFFFF;
+  background: #40D9C2;
+  border-color: #40D9C2;
+  color: #101426;
 }
 
 .milestone-node.active .m-circle {
-  background: #7C3AED;
-  border-color: #7C3AED;
+  background: var(--primary);
+  border-color: var(--primary);
   color: #FFFFFF;
 }
 
 .milestone-node.active span {
-  color: #7C3AED;
+  color: var(--primary);
   font-weight: 700;
 }
 
 /* Requirements Checklist in Detail Modal */
 .requirements-checklist-section {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 1.25rem;
@@ -384,7 +385,7 @@
   align-items: center;
   gap: 0.85rem;
   padding: 0.75rem 1rem;
-  background: #FFFFFF;
+  background: #14192D;
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text-main);
@@ -396,12 +397,13 @@
 }
 
 .req-interactive-row:hover {
-  border-color: var(--border-hover);
+  border-color: rgba(136, 117, 255, 0.3);
+  background: #1C233C;
   box-shadow: var(--shadow-xs);
 }
 
 .req-interactive-row.completed {
-  background: #F8FAFC;
+  background: rgba(20, 25, 45, 0.5);
   border-color: var(--border);
   color: var(--text-muted);
   text-decoration: line-through;
@@ -409,8 +411,8 @@
 
 /* Submitted Proof Box */
 .submitted-proof-box {
-  background: var(--accent-sky-light);
-  border: 1px solid rgba(2, 132, 199, 0.25);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
   border-radius: 14px;
   padding: 1.25rem;
   margin-bottom: 1.5rem;
@@ -419,7 +421,7 @@
 .proof-header {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #0284C7;
+  color: #38BDF8;
   text-transform: uppercase;
   margin-bottom: 0.75rem;
   display: flex;
@@ -452,8 +454,8 @@
 
 /* Congratulations Banner after project completion */
 .project-congrats-banner {
-  background: var(--accent-emerald-light);
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(64, 217, 194, 0.12);
+  border: 1px solid rgba(64, 217, 194, 0.25);
   border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -463,7 +465,7 @@
 .congrats-title {
   font-size: 1.35rem;
   font-weight: 800;
-  color: #059669;
+  color: #40D9C2;
   margin-bottom: 0.5rem;
 }
 
@@ -476,7 +478,7 @@
 }
 
 .next-step-recommend-box {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;

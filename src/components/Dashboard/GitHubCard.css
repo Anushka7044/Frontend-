@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   color: var(--text-muted);
   font-size: 0.72rem;
@@ -18,9 +18,9 @@
 }
 
 .demo-toggle-btn:hover {
-  background: #F1F5F9;
+  background: #1C233C;
   color: var(--text-main);
-  border-color: var(--border-hover);
+  border-color: rgba(136, 117, 255, 0.3);
 }
 
 .github-stats-grid {
@@ -30,7 +30,7 @@
 }
 
 .github-stat-item {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.75rem;
@@ -53,15 +53,15 @@
 }
 
 .g-icon {
-  color: #0284C7;
+  color: #38BDF8;
 }
 
 .g-icon.orange {
-  color: #EA580C;
+  color: #FB923C;
 }
 
 .g-icon.purple {
-  color: #7C3AED;
+  color: #8875FF;
 }
 
 .g-stat-num {
@@ -84,7 +84,7 @@
 
 /* Language Breakdown */
 .language-breakdown-box {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.85rem;
@@ -106,14 +106,14 @@
 }
 
 .lang-primary-badge {
-  color: #D97706;
+  color: #FBBF24;
   font-weight: 700;
 }
 
 .lang-segmented-bar {
   width: 100%;
   height: 8px;
-  background: #E2E8F0;
+  background: #252D4A;
   border-radius: var(--radius-full);
   display: flex;
   overflow: hidden;
@@ -178,7 +178,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.55rem 0.75rem;
-  background: #FFFFFF;
+  background: #14192D;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 0.78rem;
@@ -186,12 +186,12 @@
 }
 
 .commit-feed-item:hover {
-  background: #F8FAFC;
-  border-color: var(--border-hover);
+  background: #1C233C;
+  border-color: rgba(136, 117, 255, 0.3);
 }
 
 .commit-icon {
-  color: #0284C7;
+  color: #38BDF8;
   flex-shrink: 0;
 }
 
@@ -229,8 +229,8 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #F8FAFC;
-  border: 1px dashed var(--border-hover);
+  background: var(--bg-card-subtle);
+  border: 1px dashed var(--border);
   border-radius: var(--radius-md);
   gap: 0.75rem;
 }
@@ -239,7 +239,7 @@
   width: 52px;
   height: 52px;
   border-radius: var(--radius-full);
-  background: #E2E8F0;
+  background: #252D4A;
   color: var(--text-muted);
   display: flex;
   align-items: center;

@@ -1,33 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
-  Sparkles, LayoutDashboard, BookOpen, BarChart3, Brain, 
-  Target, Rocket, GitBranch, Trophy, Flame, FileText, 
+  Sparkles, LayoutGrid, BookOpen, Brain, 
+  Target, Rocket, Trophy, Flame, FileText, 
   Bot, User, Settings, LogOut, ChevronLeft, ChevronRight, X, Home,
-  Github, Linkedin
+  Github, Linkedin, Calendar, PlaySquare, HelpCircle, Sun, Moon,
+  ChevronDown, BarChart3, Layers
 } from 'lucide-react';
 import { SIDEBAR_ITEMS } from '../../data/dashboardData';
 import './Sidebar.css';
 
-const ICON_COMPONENTS = {
-  LayoutDashboard,
-  BookOpen,
-  BarChart3,
-  Brain,
-  Sparkles,
-  Target,
-  Rocket,
-  GitBranch,
-  Trophy,
-  Flame,
-  FileText,
-  Bot,
-  User,
-  Settings,
-  Github,
-  Linkedin
-};
-
-const CATEGORIES = ['Main', 'Learning', 'Growth', 'Career', 'Account', 'AI Assistant'];
+// Primary nav items directly matching the reference image
+const REFERENCE_PRIMARY_NAV = [
+  { id: 'profile', label: 'Profile', icon: User, route: 'profile' },
+  { id: 'dashboard', label: 'Dashboard', icon: LayoutGrid, route: 'dashboard' },
+  { id: 'challenges', label: 'Schedule', icon: Calendar, route: 'challenges' },
+  { id: 'skills', label: 'Courses', icon: PlaySquare, route: 'skills' },
+  { id: 'achievements', label: 'Achievements', icon: Trophy, route: 'achievements' }
+];
 
 export default function Sidebar({ 
   activeNav, 
@@ -41,16 +30,17 @@ export default function Sidebar({
   onNavigate,
   onLogout
 }) {
-  const handleItemClick = (item) => {
-    if (item.isImplemented) {
-      if (setActiveNav) setActiveNav(item.id);
-      if (onNavigate) onNavigate(item.id);
-    } else {
-      if (onSelectFeature) onSelectFeature(item);
-    }
-    if (mobileOpen && setMobileOpen) {
-      setMobileOpen(false);
-    }
+  const [showAllModules, setShowAllModules] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const handleNavClick = (routeId) => {
+    if (setActiveNav) setActiveNav(routeId);
+    if (onNavigate) onNavigate(routeId);
+    if (mobileOpen && setMobileOpen) setMobileOpen(false);
+  };
+
+  const toggleTheme = () => {
+    setIsDarkMode(prev => !prev);
   };
 
   return (
@@ -64,20 +54,20 @@ export default function Sidebar({
         />
       )}
 
-      <aside className={`dashboard-sidebar ${isCollapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
+      <aside className={`dashboard-sidebar selfstudy-sidebar ${isCollapsed ? 'collapsed' : ''} ${mobileOpen ? 'mobile-open' : ''}`}>
         {/* Brand / Logo Area */}
         <div className="sidebar-brand">
           <button 
             className="brand-link" 
-            onClick={() => onNavigate('home')}
-            title="StudyHub Home"
+            onClick={() => handleNavClick('dashboard')}
+            title="SelfStudy Dashboard"
           >
-            <div className="brand-icon-box">
-              <Sparkles size={20} className="brand-icon" />
+            <div className="brand-logo-mark">
+              <span className="brand-leaf-dot"></span>
             </div>
             {!isCollapsed && (
-              <span className="brand-name">
-                Study<span className="brand-accent">Hub</span>
+              <span className="selfstudy-brand-name">
+                <span className="brand-green">Self</span>Study
               </span>
             )}
           </button>
@@ -92,93 +82,181 @@ export default function Sidebar({
           </button>
         </div>
 
-        {/* Navigation Item List Grouped by Category */}
+        {/* Reference Primary Navigation List */}
         <nav className="sidebar-nav" aria-label="Dashboard Navigation">
-          {CATEGORIES.map(category => {
-            const items = SIDEBAR_ITEMS.filter(item => item.category === category);
-            if (!items.length) return null;
+          <ul className="sidebar-menu primary-ref-menu">
+            {REFERENCE_PRIMARY_NAV.map((item) => {
+              const Icon = item.icon;
+              const isActive = activeNav === item.id || (item.id === 'challenges' && activeNav === 'recommendations') || (item.id === 'skills' && activeNav === 'projects');
 
-            return (
-              <div key={category} className="sidebar-category-group">
-                {!isCollapsed && category !== 'Main' && (
-                  <div className="nav-group-label">{category}</div>
-                )}
+              return (
+                <li key={item.id}>
+                  <button
+                    className={`sidebar-item ref-nav-item ${isActive ? 'active' : ''}`}
+                    onClick={() => handleNavClick(item.route)}
+                    title={isCollapsed ? item.label : undefined}
+                  >
+                    <span className="item-icon-wrapper">
+                      <Icon size={19} strokeWidth={isActive ? 2.2 : 1.8} />
+                    </span>
+                    {!isCollapsed && (
+                      <span className="item-label">{item.label}</span>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
 
-                <ul className="sidebar-menu">
-                  {items.map((item) => {
-                    const Icon = ICON_COMPONENTS[item.icon] || Sparkles;
-                    const isActive = activeNav === item.id;
+          {/* Secondary Tools Toggle to preserve full access to all 14 pages */}
+          {!isCollapsed && (
+            <div className="sidebar-tools-accordion">
+              <button 
+                className="tools-toggle-btn"
+                onClick={() => setShowAllModules(!showAllModules)}
+                aria-expanded={showAllModules}
+              >
+                <span className="tools-toggle-title">
+                  <Layers size={14} />
+                  <span>More Modules</span>
+                </span>
+                <ChevronDown size={14} className={`tools-chevron ${showAllModules ? 'rotated' : ''}`} />
+              </button>
 
-                    return (
-                      <li key={item.id}>
-                        <button
-                          className={`sidebar-item ${isActive ? 'active' : ''} ${!item.isImplemented ? 'future-item' : ''}`}
-                          onClick={() => handleItemClick(item)}
-                          title={isCollapsed ? item.label : undefined}
-                        >
-                          <span className="item-icon-wrapper">
-                            <Icon size={18} />
-                          </span>
-                          {!isCollapsed && (
-                            <span className="item-label">{item.label}</span>
-                          )}
-                          {!isCollapsed && !item.isImplemented && (
-                            <span className="item-badge-stage">{item.stage}</span>
-                          )}
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            );
-          })}
+              {showAllModules && (
+                <div className="tools-dropdown-list">
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'notes' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('notes')}
+                  >
+                    <BookOpen size={15} />
+                    <span>Study Notes</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'results' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('results')}
+                  >
+                    <BarChart3 size={15} />
+                    <span>Academic Results</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'projects' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('projects')}
+                  >
+                    <Rocket size={15} />
+                    <span>Projects</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'progress' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('progress')}
+                  >
+                    <Flame size={15} />
+                    <span>Progress Journey</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'github' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('github')}
+                  >
+                    <Github size={15} />
+                    <span>GitHub Integration</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'resume' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('resume')}
+                  >
+                    <FileText size={15} />
+                    <span>Resume Builder</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'linkedin' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('linkedin')}
+                  >
+                    <Linkedin size={15} />
+                    <span>LinkedIn</span>
+                  </button>
+                  <button 
+                    className={`tools-item-btn ${activeNav === 'ai' ? 'active' : ''}`}
+                    onClick={() => handleNavClick('ai')}
+                  >
+                    <Bot size={15} />
+                    <span>AI Assistant</span>
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Bottom Group Matching Reference Image */}
+          <div className="sidebar-bottom-group">
+            <ul className="sidebar-menu secondary-ref-menu">
+              <li>
+                <button
+                  className="sidebar-item ref-nav-item"
+                  onClick={() => onSelectFeature ? onSelectFeature({ label: 'Platform Settings', stage: 'Config' }) : null}
+                  title="Settings"
+                >
+                  <span className="item-icon-wrapper">
+                    <Settings size={18} strokeWidth={1.8} />
+                  </span>
+                  {!isCollapsed && <span className="item-label">Settings</span>}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="sidebar-item ref-nav-item"
+                  onClick={() => handleNavClick('ai')}
+                  title="Help & Support"
+                >
+                  <span className="item-icon-wrapper">
+                    <HelpCircle size={18} strokeWidth={1.8} />
+                  </span>
+                  {!isCollapsed && <span className="item-label">Help</span>}
+                </button>
+              </li>
+              <li>
+                <button
+                  className="sidebar-item ref-nav-item logout-item"
+                  onClick={onLogout}
+                  title="Log out"
+                >
+                  <span className="item-icon-wrapper">
+                    <LogOut size={18} strokeWidth={1.8} />
+                  </span>
+                  {!isCollapsed && <span className="item-label">Log out</span>}
+                </button>
+              </li>
+            </ul>
+          </div>
         </nav>
 
-        {/* Sidebar Footer & Collapse Toggle */}
-        <div className="sidebar-footer">
-          {/* Collapse Toggle for Desktop / Tablet */}
+        {/* Sidebar Footer: Day/Night Mode Switch Pill Matching Reference */}
+        <div className="sidebar-footer-controls">
+          {!isCollapsed && (
+            <div className="theme-toggle-pill-wrap">
+              <button 
+                className={`theme-mode-pill ${isDarkMode ? 'dark-active' : 'light-active'}`}
+                onClick={toggleTheme}
+                aria-label="Toggle day and night mode"
+                title="Toggle day/night theme"
+              >
+                <Sun size={15} className={`theme-icon sun-icon ${!isDarkMode ? 'active' : ''}`} />
+                <div className={`theme-switch-slider ${isDarkMode ? 'slider-right' : 'slider-left'}`}>
+                  <span className="theme-slider-thumb"></span>
+                </div>
+                <Moon size={15} className={`theme-icon moon-icon ${isDarkMode ? 'active' : ''}`} />
+              </button>
+            </div>
+          )}
+
+          {/* Collapse Toggle */}
           <button 
-            className="sidebar-collapse-toggle"
+            className="sidebar-collapse-toggle-clean"
             onClick={() => setIsCollapsed(!isCollapsed)}
             aria-label={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
             title={isCollapsed ? 'Expand' : 'Collapse'}
           >
-            {isCollapsed ? <ChevronRight size={18} /> : (
-              <>
-                <ChevronLeft size={18} />
-                <span className="collapse-text">Collapse Menu</span>
-              </>
-            )}
+            {isCollapsed ? <ChevronRight size={18} /> : <ChevronLeft size={18} />}
           </button>
-
-          {/* Quick User Card / Return to Home */}
-          {!isCollapsed ? (
-            <div className="sidebar-user-card">
-              <div className="sidebar-user-avatar">
-                {user?.name ? user.name.slice(0, 2).toUpperCase() : 'AS'}
-              </div>
-              <div className="sidebar-user-info">
-                <span className="user-name-text">{user?.name || 'Anushka Sharma'}</span>
-                <span className="user-role-text">{user?.course ? 'Student' : 'CSE 2nd Year'}</span>
-              </div>
-              <button 
-                className="user-home-btn"
-                onClick={() => onNavigate('home')}
-                title="Go to Landing Page"
-              >
-                <Home size={16} />
-              </button>
-            </div>
-          ) : (
-            <button 
-              className="sidebar-mini-avatar-btn"
-              onClick={() => onNavigate('home')}
-              title="Return to Home"
-            >
-              <Home size={18} />
-            </button>
-          )}
         </div>
       </aside>
     </>

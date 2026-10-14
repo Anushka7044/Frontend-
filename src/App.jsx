@@ -428,7 +428,13 @@ export default function App() {
       {/* Routes: Dashboard + Learning System + Action & Growth (Unified App Shell) */}
       {currentUser && AUTH_PAGES.includes(currentPage) && (
         <div className="dashboard-app-layout">
-          {/* Responsive Persistent Sidebar */}
+          {/* Ambient Botanical Background Lighting */}
+          <div className="ambient-mint-orb orb-1" aria-hidden="true" />
+          <div className="ambient-mint-orb orb-2" aria-hidden="true" />
+
+          {/* Large Floating Translucent Window Surface */}
+          <div className="dashboard-window-surface">
+            {/* Responsive Persistent Sidebar */}
           <Sidebar 
             activeNav={currentPage}
             setActiveNav={navigate}
@@ -641,8 +647,9 @@ export default function App() {
               </ErrorBoundary>
             </main>
           </div>
+        </div>
 
-          {/* Floating Interactive AI Assistant */}
+        {/* Floating Interactive AI Assistant */}
           <AIAssistant 
             onNavigate={navigate}
             studentContext={{

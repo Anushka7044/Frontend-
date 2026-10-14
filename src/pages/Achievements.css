@@ -1,4 +1,4 @@
-/* Achievements Page Styling - Modern SaaS Light Theme */
+/* Achievements Page Styling - Midnight Navy Palette */
 .achievements-page-container {
   max-width: 1320px;
   margin: 0 auto;
@@ -24,9 +24,9 @@
   width: 48px;
   height: 48px;
   border-radius: var(--radius-md);
-  background: var(--accent-amber-light);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #D97706;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #FBBF24;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,16 +59,16 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xs);
+  box-shadow: var(--shadow-sm);
   transition: all var(--transition-fast);
 }
 
 .achievement-stat-card:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .a-stat-icon-wrapper {
@@ -82,27 +82,27 @@
 }
 
 .a-stat-icon-wrapper.amber {
-  background: var(--accent-amber-light);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #D97706;
+  background: rgba(251, 191, 36, 0.15);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  color: #FBBF24;
 }
 
 .a-stat-icon-wrapper.gray {
-  background: #F1F5F9;
+  background: #14192D;
   border: 1px solid var(--border);
   color: var(--text-muted);
 }
 
 .a-stat-icon-wrapper.blue {
-  background: var(--accent-sky-light);
-  border: 1px solid rgba(2, 132, 199, 0.25);
-  color: #0284C7;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
 }
 
 .a-stat-icon-wrapper.gold {
-  background: #FFFBEB;
-  border: 1px solid #FCD34D;
-  color: #B45309;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  color: #FBBF24;
 }
 
 .a-stat-label {
@@ -135,7 +135,7 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   padding: 0.3rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
@@ -160,13 +160,13 @@
 
 .achievement-tab-btn:hover {
   color: var(--text-main);
-  background: #F8FAFC;
+  background: var(--bg-surface-elevated);
 }
 
 .achievement-tab-btn.active {
-  background: var(--accent-amber-light);
-  color: #D97706;
-  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(136, 117, 255, 0.15);
+  color: var(--accent-primary);
+  border-color: rgba(136, 117, 255, 0.3);
 }
 
 /* Achievements Grid */
@@ -182,7 +182,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -192,18 +192,18 @@
 
 .achievement-card-item:hover {
   transform: translateY(-2px);
-  border-color: var(--border-hover);
+  border-color: rgba(136, 117, 255, 0.4);
   box-shadow: var(--shadow-md);
 }
 
 .achievement-card-item.unlocked:hover {
-  border-color: #FCD34D;
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  border-color: rgba(251, 191, 36, 0.5);
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.15);
 }
 
 .achievement-card-item.locked {
-  opacity: 0.85;
-  background: #F8FAFC;
+  opacity: 0.75;
+  background: #14192D;
   border-color: var(--border);
 }
 
@@ -234,7 +234,7 @@
 
 .a-card-desc {
   font-size: 0.84rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   line-height: 1.45;
 }
 
@@ -254,7 +254,7 @@
   align-items: center;
   gap: 4px;
   font-weight: 700;
-  color: #D97706;
+  color: #FBBF24;
 }
 
 .a-status-text {
@@ -264,7 +264,7 @@
 }
 
 .a-status-text.earned {
-  color: #059669;
+  color: var(--accent-secondary);
   font-weight: 600;
 }
 
@@ -284,14 +284,14 @@
 
 .locked-progress-track {
   height: 6px;
-  background: #E2E8F0;
+  background: #101426;
   border-radius: 9999px;
   overflow: hidden;
 }
 
 .locked-progress-fill {
   height: 100%;
-  background: #F59E0B;
+  background: #FBBF24;
   border-radius: 9999px;
 }
 
@@ -319,8 +319,9 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background: #F1F5F9;
+  background: #14192D;
   color: var(--text-muted);
+  border: 1px solid var(--border);
   margin-bottom: 0.5rem;
 }
 
@@ -333,13 +334,13 @@
 
 .a-detail-desc {
   font-size: 0.92rem;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
 
 .a-detail-spec-box {
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.25rem;

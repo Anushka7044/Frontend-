@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .dashboard-card {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -43,39 +43,39 @@
 }
 
 .card-icon-tag.cyan {
-  background: #E0F2FE;
-  color: #0284C7;
-  border: 1px solid rgba(2, 132, 199, 0.2);
+  background: rgba(64, 217, 194, 0.12);
+  color: #40D9C2;
+  border: 1px solid rgba(64, 217, 194, 0.25);
 }
 
 .card-icon-tag.emerald {
-  background: #ECFDF5;
-  color: #059669;
-  border: 1px solid rgba(16, 185, 129, 0.2);
+  background: rgba(64, 217, 194, 0.12);
+  color: #40D9C2;
+  border: 1px solid rgba(64, 217, 194, 0.25);
 }
 
 .card-icon-tag.amber {
-  background: #FFFBEB;
-  color: #D97706;
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  background: rgba(251, 191, 36, 0.12);
+  color: #FBBF24;
+  border: 1px solid rgba(251, 191, 36, 0.25);
 }
 
 .card-icon-tag.purple {
-  background: #EDE9FE;
-  color: #7C3AED;
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  background: rgba(136, 117, 255, 0.12);
+  color: #8875FF;
+  border: 1px solid rgba(136, 117, 255, 0.25);
 }
 
 .card-icon-tag.orange {
-  background: #FFF7ED;
-  color: #EA580C;
-  border: 1px solid rgba(234, 88, 12, 0.2);
+  background: rgba(249, 115, 22, 0.12);
+  color: #FB923C;
+  border: 1px solid rgba(249, 115, 22, 0.25);
 }
 
 .card-icon-tag.indigo {
-  background: #EEF2FF;
-  color: #4F46E5;
-  border: 1px solid rgba(79, 70, 229, 0.2);
+  background: rgba(136, 117, 255, 0.15);
+  color: #A78BFA;
+  border: 1px solid rgba(136, 117, 255, 0.25);
 }
 
 .card-title {
@@ -93,7 +93,7 @@
 /* Card Pill Tabs */
 .card-pill-tabs {
   display: flex;
-  background: #F1F5F9;
+  background: #14192D;
   padding: 0.2rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border);
@@ -118,7 +118,7 @@
 .card-tab-btn.active {
   background: var(--primary);
   color: #FFFFFF;
-  box-shadow: 0 1px 4px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 2px 8px rgba(136, 117, 255, 0.35);
 }
 
 /* Academic Stats Row */
@@ -129,7 +129,7 @@
 }
 
 .academic-stat-box {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.85rem;
@@ -167,7 +167,7 @@
 .stat-highlight-text {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0284C7;
+  color: var(--secondary);
 }
 
 .stat-subtext {
@@ -184,7 +184,7 @@
 }
 
 .stat-trend-tag.positive {
-  color: #059669;
+  color: var(--secondary);
 }
 
 /* SVG Chart Container */
@@ -192,7 +192,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.85rem;
@@ -211,13 +211,13 @@
 }
 
 .graph-badge {
-  background: var(--accent-emerald-light);
-  color: #059669;
+  background: rgba(64, 217, 194, 0.12);
+  color: #40D9C2;
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-full);
   font-size: 0.68rem;
   font-weight: 600;
-  border: 1px solid rgba(16, 185, 129, 0.25);
+  border: 1px solid rgba(64, 217, 194, 0.25);
 }
 
 .svg-chart-container {
@@ -243,15 +243,15 @@
   flex-direction: column;
   gap: 0.35rem;
   padding: 0.75rem 0.85rem;
-  background: #FFFFFF;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
 }
 
 .subject-row-item:hover {
-  border-color: var(--border-hover);
-  background: #F8FAFC;
+  border-color: rgba(136, 117, 255, 0.3);
+  background: #1C233C;
 }
 
 .subject-meta-top {
@@ -281,8 +281,8 @@
 .grade-pill {
   font-size: 0.68rem;
   font-weight: 700;
-  background: var(--primary-light);
-  border: 1px solid var(--primary-light-border);
+  background: rgba(136, 117, 255, 0.15);
+  border: 1px solid rgba(136, 117, 255, 0.3);
   padding: 0.1rem 0.45rem;
   border-radius: var(--radius-sm);
   color: var(--primary);
@@ -291,7 +291,7 @@
 .subject-progress-track {
   width: 100%;
   height: 6px;
-  background: #E2E8F0;
+  background: #252D4A;
   border-radius: var(--radius-full);
   overflow: hidden;
 }

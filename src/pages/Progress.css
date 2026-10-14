@@ -56,7 +56,7 @@
 
 .growth-cat-card {
   padding: 1.5rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -84,11 +84,11 @@
   justify-content: center;
 }
 
-.growth-cat-icon.blue { background: var(--accent-sky-light); color: #0284C7; }
-.growth-cat-icon.purple { background: var(--accent-purple-light); color: #7C3AED; }
-.growth-cat-icon.orange { background: #FFF7ED; color: #EA580C; }
-.growth-cat-icon.amber { background: var(--accent-amber-light); color: #D97706; }
-.growth-cat-icon.cyan { background: var(--accent-sky-light); color: #0284C7; }
+.growth-cat-icon.blue { background: rgba(56, 189, 248, 0.12); color: #38BDF8; }
+.growth-cat-icon.purple { background: rgba(136, 117, 255, 0.15); color: var(--primary); }
+.growth-cat-icon.orange { background: rgba(249, 115, 22, 0.12); color: #FB923C; }
+.growth-cat-icon.amber { background: rgba(251, 191, 36, 0.12); color: #FBBF24; }
+.growth-cat-icon.cyan { background: rgba(64, 217, 194, 0.12); color: #40D9C2; }
 
 .growth-cat-title {
   font-size: 1.1rem;
@@ -129,7 +129,7 @@
 /* Visual Growth Timeline */
 .growth-timeline-card {
   padding: 1.75rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -163,7 +163,7 @@
   bottom: 8px;
   left: 11px;
   width: 2px;
-  background: #E2E8F0;
+  background: var(--border);
 }
 
 .timeline-event-node {
@@ -177,17 +177,17 @@
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px solid var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 2;
-  box-shadow: 0 0 0 3px #FFFFFF;
+  box-shadow: 0 0 0 3px var(--bg-canvas);
 }
 
 .timeline-event-content {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem 1.25rem;
@@ -195,8 +195,8 @@
 }
 
 .timeline-event-content:hover {
-  border-color: var(--border-hover);
-  background: #FFFFFF;
+  border-color: rgba(136, 117, 255, 0.3);
+  background: #1C233C;
   box-shadow: var(--shadow-xs);
 }
 
@@ -228,7 +228,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);
@@ -255,7 +255,7 @@
 }
 
 .journey-tally-item {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;

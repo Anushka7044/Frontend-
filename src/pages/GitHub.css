@@ -40,7 +40,7 @@
 /* Header Profile Banner */
 .github-hero-card {
   padding: 2rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -60,7 +60,7 @@
   right: -10%;
   width: 350px;
   height: 350px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(136, 117, 255, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -74,15 +74,15 @@
   width: 82px;
   height: 82px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-  border: 3px solid #FFFFFF;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  border: 3px solid var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
   font-size: 1.75rem;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 4px 14px rgba(136, 117, 255, 0.3);
   position: relative;
   flex-shrink: 0;
 }
@@ -179,7 +179,7 @@
 
 .github-stat-card {
   padding: 1.25rem 1.4rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   display: flex;
@@ -218,11 +218,11 @@
   justify-content: center;
 }
 
-.github-stat-icon.purple { background: #FAF5FF; color: #7E22CE; }
-.github-stat-icon.emerald { background: #ECFDF5; color: #059669; }
-.github-stat-icon.amber { background: #FFFBEB; color: #D97706; }
-.github-stat-icon.cyan { background: #F0F9FF; color: #0284C7; }
-.github-stat-icon.indigo { background: #EEF2FF; color: #4F46E5; }
+.github-stat-icon.purple { background: rgba(136, 117, 255, 0.15); color: var(--primary); }
+.github-stat-icon.emerald { background: rgba(64, 217, 194, 0.12); color: #40D9C2; }
+.github-stat-icon.amber { background: rgba(251, 191, 36, 0.12); color: #FBBF24; }
+.github-stat-icon.cyan { background: rgba(56, 189, 248, 0.12); color: #38BDF8; }
+.github-stat-icon.indigo { background: rgba(136, 117, 255, 0.15); color: #A78BFA; }
 
 .github-stat-val {
   font-size: 1.85rem;
@@ -240,7 +240,7 @@
 /* Contribution Activity Heatmap Card */
 .github-heatmap-card {
   padding: 1.75rem 2rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -435,18 +435,19 @@
 }
 
 .repo-tab-btn.active {
-  background: #FFFFFF;
-  color: var(--primary);
+  background: var(--bg-surface-elevated);
+  color: var(--accent-primary);
   font-weight: 600;
   box-shadow: var(--shadow-xs);
+  border: 1px solid rgba(136, 117, 255, 0.25);
 }
 
 .tab-badge {
   font-size: 0.72rem;
   padding: 0.1rem 0.4rem;
   border-radius: var(--radius-full);
-  background: #EEF2FF;
-  color: var(--primary);
+  background: rgba(136, 117, 255, 0.15);
+  color: var(--accent-primary);
 }
 
 .repos-cards-grid {
@@ -457,7 +458,7 @@
 
 .repo-card {
   padding: 1.5rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -470,14 +471,14 @@
 }
 
 .repo-card:hover {
-  border-color: #C7D2FE;
+  border-color: rgba(136, 117, 255, 0.4);
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .repo-card.featured-card {
-  border-color: #FCD34D;
-  background: #FFFDF7;
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.03);
 }
 
 .repo-card-top {
@@ -497,7 +498,7 @@
 .repo-name-link {
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--accent-primary);
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -507,7 +508,7 @@
 
 .repo-name-link:hover {
   text-decoration: underline;
-  color: #4338CA;
+  color: var(--accent-primary-hover);
 }
 
 .repo-platform-badge {
@@ -515,9 +516,9 @@
   font-weight: 600;
   padding: 0.15rem 0.5rem;
   border-radius: var(--radius-full);
-  background: #ECFDF5;
-  color: #059669;
-  border: 1px solid #A7F3D0;
+  background: rgba(64, 217, 194, 0.1);
+  color: var(--accent-secondary);
+  border: 1px solid rgba(64, 217, 194, 0.25);
 }
 
 .repo-desc {
@@ -538,9 +539,9 @@
   font-size: 0.72rem;
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-full);
-  background: #EEF2FF;
-  color: var(--primary);
-  border: 1px solid #C7D2FE;
+  background: rgba(136, 117, 255, 0.1);
+  color: var(--accent-primary);
+  border: 1px solid rgba(136, 117, 255, 0.2);
   font-weight: 500;
 }
 
@@ -549,9 +550,9 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 0.85rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border);
   font-size: 0.8rem;
-  color: var(--text-subtle);
+  color: var(--text-muted);
 }
 
 .repo-meta-left {
@@ -589,20 +590,20 @@
 }
 
 .repo-star-btn:hover {
-  background: #F1F5F9;
-  color: #D97706;
+  background: var(--bg-surface-elevated);
+  color: #F59E0B;
 }
 
 .repo-star-btn.is-featured {
-  color: #D97706;
-  background: #FFFBEB;
+  color: #F59E0B;
+  background: rgba(245, 158, 11, 0.15);
 }
 
 /* Empty / Disconnected State */
 .github-disconnected-banner {
   padding: 3rem 2rem;
   text-align: center;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 2px dashed var(--border);
   border-radius: var(--radius-lg);
   display: flex;
@@ -615,9 +616,9 @@
   width: 64px;
   height: 64px;
   border-radius: var(--radius-full);
-  background: #FEF2F2;
-  color: #DC2626;
-  border: 1px solid #FECACA;
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--status-danger);
+  border: 1px solid rgba(239, 68, 68, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -643,9 +644,9 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(10, 13, 24, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -656,8 +657,8 @@
 .github-modal-card {
   width: 100%;
   max-width: 560px;
-  background: #FFFFFF;
-  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
   display: flex;
@@ -671,7 +672,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: #14192D;
 }
 
 .github-modal-header h3 {
@@ -691,7 +692,7 @@
 
 .modal-close-icon:hover {
   color: var(--text-main);
-  background: #F1F5F9;
+  background: var(--bg-surface-elevated);
 }
 
 .github-modal-body {
@@ -718,7 +719,7 @@
 .github-input, .github-textarea, .github-select {
   padding: 0.7rem 0.9rem;
   border-radius: var(--radius-sm);
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   color: var(--text-main);
   font-family: inherit;
@@ -728,9 +729,9 @@
 }
 
 .github-input:focus, .github-textarea:focus, .github-select:focus {
-  background: #FFFFFF;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  background: var(--bg-surface);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(136, 117, 255, 0.15);
 }
 
 .github-textarea {
@@ -744,7 +745,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 0.75rem;
-  background: #F8FAFC;
+  background: #14192D;
 }
 
 /* Responsiveness */

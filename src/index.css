@@ -1,68 +1,91 @@
 /* ==========================================================================
    STUDENT GROWTH PLATFORM - GLOBAL DESIGN SYSTEM
-   Theme: Modern SaaS Light Theme (Clean Minimal + Premium + Soft & Friendly)
+   Theme: Midnight Navy (Deep Midnight Canvas + Electric Violet + Fresh Teal)
    ========================================================================== */
 
 :root {
   /* Canvas & Surface Colors */
-  --bg-dark: #F8FAFC;            /* Legacy var alias -> Maps to clean light canvas */
-  --bg-canvas: #F8FAFC;          /* Clean cool gray canvas */
-  --bg-surface: #FFFFFF;         /* Pure white elevated surface */
-  --bg-card: #FFFFFF;            /* White card background */
-  --bg-card-hover: #F8FAFC;      /* Subtle hover surface */
-  --bg-card-subtle: #F1F5F9;     /* Soft secondary card background */
-  --bg-input: #FFFFFF;           /* Form input background */
-  --bg-input-hover: #F8FAFC;
-  --bg-hover: #F1F5F9;
+  --bg-dark: #101426;            /* Deep Midnight Navy canvas */
+  --bg-canvas: #101426;          /* Deep Midnight Navy canvas */
+  --bg-surface: #191F35;         /* Elevated navy surface */
+  --bg-card: #191F35;            /* Navy card background */
+  --bg-card-hover: #202744;      /* Elevated hover card surface */
+  --bg-card-subtle: #14192D;     /* Darker nested container surface */
+  --bg-input: #13182B;           /* Form input background */
+  --bg-input-hover: #1A213A;
+  --bg-hover: #222B48;           /* Hover surface */
   
-  /* Primary & Brand Accent Colors (Deep Indigo & Soft Violet) */
-  --primary: #4F46E5;            /* Deep Indigo */
-  --primary-hover: #4338CA;      /* Rich Deep Indigo Hover */
-  --primary-active: #3730A3;
-  --primary-light: #EEF2FF;      /* Soft Indigo Tint */
-  --primary-light-border: #C7D2FE;
-  --primary-glow: rgba(79, 70, 229, 0.18);
+  /* Primary Brand Accent (Electric Violet) */
+  --primary: #8875FF;            /* Electric Violet */
+  --primary-hover: #7762FA;      /* Rich Electric Violet Hover */
+  --primary-active: #674EF5;
+  --primary-light: rgba(136, 117, 255, 0.15); /* Soft Violet Tint */
+  --primary-light-border: rgba(136, 117, 255, 0.32);
+  --primary-glow: rgba(136, 117, 255, 0.3);
 
-  /* Secondary Accents */
-  --secondary: #7C3AED;          /* Soft Violet */
-  --secondary-light: #EDE9FE;
-  --secondary-hover: #6D28D9;
+  /* Secondary Accent (Fresh Teal) */
+  --secondary: #40D9C2;          /* Fresh Teal */
+  --secondary-light: rgba(64, 217, 194, 0.15);
+  --secondary-hover: #32C2AC;
+  --secondary-glow: rgba(64, 217, 194, 0.25);
 
-  --accent-cyan: #0284C7;        /* Clean Sky/Cyan */
-  --accent-cyan-light: #E0F2FE;
-  --accent-emerald: #10B981;     /* Success Green */
-  --accent-emerald-light: #ECFDF5;
-  --accent-amber: #F59E0B;       /* Warning Amber */
-  --accent-amber-light: #FFFBEB;
-  --accent-sky: #0284C7;         /* Subtle Blue */
-  --accent-sky-light: #E0F2FE;
-  --accent-purple: #7C3AED;      /* Soft Violet */
-  --accent-purple-light: #EDE9FE;
-  --accent-rose: #EF4444;        /* Danger Red */
-  --accent-rose-light: #FEF2F2;
+  /* Status & Auxiliary Accents */
+  --accent-cyan: #38BDF8;        /* Sky Cyan */
+  --accent-cyan-light: rgba(56, 189, 248, 0.15);
+  --accent-emerald: #40D9C2;     /* Success Teal */
+  --accent-emerald-light: rgba(64, 217, 194, 0.15);
+  --accent-amber: #FBBF24;       /* Warning Amber */
+  --accent-amber-light: rgba(251, 191, 36, 0.15);
+  --accent-sky: #38BDF8;         /* Subtle Blue */
+  --accent-sky-light: rgba(56, 189, 248, 0.15);
+  --accent-purple: #A78BFA;      /* Soft Violet */
+  --accent-purple-light: rgba(167, 139, 250, 0.15);
+  --accent-rose: #F87171;        /* Danger Rose */
+  --accent-rose-light: rgba(248, 113, 113, 0.15);
 
   /* Typography Colors */
-  --text-main: #0F172A;          /* Charcoal for primary headings & key text */
-  --text-primary: #0F172A;
-  --text-secondary: #334155;      /* Dark slate for high readability body */
-  --text-muted: #64748B;          /* Medium gray for secondary/supporting text */
-  --text-subtle: #94A3B8;         /* Light slate for timestamps & metadata */
-  --text-inverse: #FFFFFF;
+  --text-main: #F4F5FA;          /* Soft White for primary headings & key text */
+  --text-primary: #F4F5FA;
+  --text-secondary: #C2C9DE;      /* Crisp Muted Slate for high readability */
+  --text-muted: #A6AEC7;          /* Muted Blue-Gray for secondary labels */
+  --text-subtle: #727C9C;         /* Subtle Slate for timestamps & metadata */
+  --text-inverse: #101426;
 
-  /* Borders & Dividers */
-  --border: #E2E8F0;             /* Crisp, subtle slate border */
-  --border-subtle: #F1F5F9;
-  --border-focus: #4F46E5;       /* Primary focus border */
-  --border-hover: #CBD5E1;       /* Refined hover border */
+  /* Borders & Dividers (Subtle, low-contrast blue-gray) */
+  --border: #252D4A;             /* Subtle low-contrast blue-gray */
+  --border-subtle: #1C233B;      /* Deeper divider */
+  --border-focus: #8875FF;       /* Electric Violet focus */
+  --border-hover: #364166;       /* Clean hover border */
 
-  /* Shadows (Modern Multi-layer SaaS Soft Shadows) */
-  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.08), 0 4px 6px -4px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.09), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --shadow-primary: 0 4px 14px 0 rgba(79, 70, 229, 0.25);
-  --glass-blur: blur(12px);
+  /* Mint / Sage Glassmorphism Palette (Reference Image Theme) */
+  --mint-bg-main: #DDF4E5;
+  --mint-bg-secondary: #C4E7D2;
+  --mint-bg-gradient: linear-gradient(135deg, #EDF9F2 0%, #DDF4E5 45%, #C4E7D2 100%);
+  --mint-accent-primary: #398A69;
+  --mint-accent-secondary: #78C9A0;
+  --mint-accent-dark: #1E4634;
+  --mint-highlight-amber: #F8B95B;
+  --mint-highlight-orange: #FF965B;
+  --mint-highlight-coral: #F7935B;
+  --mint-text-main: #24372E;
+  --mint-text-secondary: #587164;
+  --mint-text-muted: #71867A;
+  --mint-card-surface: rgba(255, 255, 255, 0.42);
+  --mint-card-surface-hover: rgba(255, 255, 255, 0.65);
+  --mint-card-border: rgba(255, 255, 255, 0.68);
+  --mint-card-shadow: 0 10px 30px -5px rgba(26, 48, 38, 0.07), 0 2px 8px -2px rgba(26, 48, 38, 0.04);
+  --mint-app-shell: rgba(240, 252, 246, 0.65);
+  --mint-app-border: rgba(255, 255, 255, 0.85);
+  --mint-app-shadow: 0 30px 80px -15px rgba(28, 56, 43, 0.18), 0 10px 30px -5px rgba(28, 56, 43, 0.1);
+
+  /* Shadows (Refined Dark Elevated Shadows) */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 6px 16px -2px rgba(0, 0, 0, 0.45), 0 2px 6px -1px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.55), 0 4px 10px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 40px -6px rgba(0, 0, 0, 0.65), 0 8px 16px -4px rgba(0, 0, 0, 0.35);
+  --shadow-primary: 0 4px 18px 0 rgba(136, 117, 255, 0.35);
+  --glass-blur: blur(14px);
 
   /* Border Radii */
   --radius-xs: 4px;
@@ -91,7 +114,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
@@ -105,15 +128,15 @@ body {
   min-height: 100vh;
 }
 
-/* Background Atmosphere Glow - Soft & Friendly subtle gradients */
+/* Background Atmosphere Glow - Distinctive midnight violet & teal radiance */
 body::before {
   content: '';
   position: fixed;
   top: -15%;
-  left: 15%;
+  left: 10%;
   width: 50vw;
   height: 50vw;
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.04) 0%, rgba(248, 250, 252, 0) 70%);
+  background: radial-gradient(circle, rgba(136, 117, 255, 0.05) 0%, rgba(16, 20, 38, 0) 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -125,7 +148,7 @@ body::after {
   right: 10%;
   width: 45vw;
   height: 45vw;
-  background: radial-gradient(circle, rgba(2, 132, 199, 0.03) 0%, rgba(248, 250, 252, 0) 70%);
+  background: radial-gradient(circle, rgba(64, 217, 194, 0.04) 0%, rgba(16, 20, 38, 0) 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -178,7 +201,7 @@ a {
   font-weight: 600;
   letter-spacing: 0.01em;
   border: 1px solid var(--border);
-  background: #F1F5F9;
+  background: var(--bg-card-subtle);
   color: var(--text-secondary);
 }
 
@@ -190,26 +213,26 @@ a {
 
 .badge-emerald {
   background: var(--accent-emerald-light);
-  border-color: rgba(16, 185, 129, 0.3);
-  color: #059669;
+  border-color: rgba(64, 217, 194, 0.3);
+  color: var(--accent-emerald);
 }
 
 .badge-amber {
   background: var(--accent-amber-light);
-  border-color: rgba(245, 158, 11, 0.3);
-  color: #D97706;
+  border-color: rgba(251, 191, 36, 0.3);
+  color: var(--accent-amber);
 }
 
 .badge-sky {
   background: var(--accent-sky-light);
-  border-color: rgba(2, 132, 199, 0.3);
-  color: #0284C7;
+  border-color: rgba(56, 189, 248, 0.3);
+  color: var(--accent-sky);
 }
 
 .badge-purple {
   background: var(--accent-purple-light);
-  border-color: rgba(124, 58, 237, 0.3);
-  color: #7C3AED;
+  border-color: rgba(167, 139, 250, 0.3);
+  color: var(--accent-purple);
 }
 
 /* Button Component System */
@@ -239,34 +262,34 @@ a {
 }
 
 .btn:disabled {
-  opacity: 0.55;
+  opacity: 0.5;
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
 }
 
 .btn-primary {
-  background: #4F46E5;
+  background: var(--primary);
   color: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(79, 70, 229, 0.25);
-  border-color: #4F46E5;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 4px 14px rgba(136, 117, 255, 0.35);
+  border-color: var(--primary);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #4338CA;
-  border-color: #4338CA;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 6px 16px rgba(79, 70, 229, 0.35);
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 6px 18px rgba(136, 117, 255, 0.45);
 }
 
 .btn-secondary {
-  background: #FFFFFF;
+  background: var(--bg-surface);
   color: var(--text-main);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-xs);
 }
 
 .btn-secondary:hover:not(:disabled) {
-  background: #F8FAFC;
+  background: var(--bg-hover);
   border-color: var(--border-hover);
   color: var(--text-main);
 }
@@ -278,7 +301,7 @@ a {
 }
 
 .btn-outline:hover:not(:disabled) {
-  background: #F1F5F9;
+  background: var(--bg-hover);
   border-color: var(--border-hover);
   color: var(--text-main);
 }
@@ -290,7 +313,7 @@ a {
 }
 
 .btn-ghost:hover:not(:disabled) {
-  background: #F1F5F9;
+  background: var(--bg-hover);
   color: var(--text-main);
 }
 
@@ -321,9 +344,9 @@ a {
   width: 100%;
 }
 
-/* Glass Card / Modern Elevated SaaS Card */
+/* Glass Card / Modern Elevated Midnight SaaS Card */
 .glass-card {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -338,7 +361,7 @@ a {
 /* Form Controls Base */
 .form-input, .form-select, .form-textarea {
   width: 100%;
-  background: #FFFFFF;
+  background: var(--bg-input);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.65rem 0.95rem;
@@ -355,8 +378,8 @@ a {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
-  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(136, 117, 255, 0.18);
+  background: var(--bg-surface);
 }
 
 /* Section Header Utility */
@@ -380,13 +403,13 @@ a {
 
 /* Clean Gradient / Heading Accents */
 .gradient-text {
-  background: linear-gradient(135deg, #0F172A 30%, #4F46E5 100%);
+  background: linear-gradient(135deg, #F4F5FA 30%, #8875FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-accent {
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #8875FF 0%, #40D9C2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -428,7 +451,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   outline-offset: 2px;
 }
 
-/* Scrollbar Styling for Light Theme */
+/* Scrollbar Styling for Midnight Theme */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -439,12 +462,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #252D4A;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: #364166;
 }
 
 /* Responsive Utilities */

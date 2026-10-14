@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(10, 13, 24, 0.75);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   display: flex;
@@ -21,7 +21,7 @@
   max-width: 440px;
   width: 100%;
   padding: 2.25rem 2rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
@@ -33,7 +33,7 @@
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   color: var(--text-muted);
   width: 36px;
@@ -47,9 +47,9 @@
 }
 
 .future-modal-close:hover {
-  background: #F1F5F9;
+  background: #1C233C;
   color: var(--text-main);
-  border-color: var(--border-hover);
+  border-color: rgba(136, 117, 255, 0.3);
 }
 
 .future-modal-icon-badge {
@@ -57,13 +57,13 @@
   height: 68px;
   margin: 0 auto 1.25rem auto;
   border-radius: 20px;
-  background: var(--primary-light);
-  border: 1px solid var(--primary-light-border);
+  background: rgba(136, 117, 255, 0.15);
+  border: 1px solid rgba(136, 117, 255, 0.25);
   color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.18);
+  box-shadow: 0 4px 14px rgba(136, 117, 255, 0.2);
 }
 
 .future-modal-stage-pill {
@@ -72,9 +72,9 @@
   gap: 0.4rem;
   padding: 0.25rem 0.85rem;
   border-radius: var(--radius-full);
-  background: var(--primary-light);
+  background: rgba(136, 117, 255, 0.15);
   color: var(--primary);
-  border: 1px solid var(--primary-light-border);
+  border: 1px solid rgba(136, 117, 255, 0.25);
   font-size: 0.78rem;
   font-weight: 600;
   margin-bottom: 0.85rem;

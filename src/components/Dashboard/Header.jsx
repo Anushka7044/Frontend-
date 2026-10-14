@@ -3,7 +3,7 @@ import {
   Search, Bell, ChevronDown, User, Settings, LogOut, 
   Menu, Sparkles, CheckCheck, Clock, ExternalLink, ArrowRight,
   BookOpen, Brain, Target, Rocket, Trophy, Flame, FileText, 
-  Github, Linkedin, Bot, X
+  Github, Linkedin, Bot, X, MessageSquare
 } from 'lucide-react';
 import { NOTIFICATIONS } from '../../data/dashboardData';
 import { INITIAL_NOTES } from '../../data/notesData';
@@ -38,10 +38,13 @@ export default function Header({
   const [notificationsList, setNotificationsList] = useState(NOTIFICATIONS);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchFocused, setSearchFocused] = useState(false);
+  const [selectedTrack, setSelectedTrack] = useState('3D');
+  const [trackDropdownOpen, setTrackDropdownOpen] = useState(false);
 
   const notifRef = useRef(null);
   const profileRef = useRef(null);
   const searchRef = useRef(null);
+  const trackRef = useRef(null);
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -54,6 +57,9 @@ export default function Header({
       }
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setSearchFocused(false);
+      }
+      if (trackRef.current && !trackRef.current.contains(event.target)) {
+        setTrackDropdownOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -215,14 +221,9 @@ export default function Header({
           <Menu size={22} />
         </button>
 
-        {/* Personalized Greeting */}
-        <div className="header-greeting-block">
-          <h2 className="header-greeting-title">
-            {getGreeting()}, <span className="greeting-name">{studentFirstName}</span> 👋
-          </h2>
-          <p className="header-greeting-subtitle">
-            Ready to continue your learning journey?
-          </p>
+        {/* Reference Dashboard Title */}
+        <div className="header-title-block">
+          <h1 className="header-page-title">Dashboard</h1>
         </div>
       </div>
 
@@ -311,6 +312,49 @@ export default function Header({
           )}
         </div>
 
+        {/* Reference Track Dropdown Pill (e.g. 3D / Web / AI) */}
+        <div className="header-track-wrapper" ref={trackRef}>
+          <button 
+            className="header-track-pill"
+            onClick={() => setTrackDropdownOpen(!trackDropdownOpen)}
+            aria-label="Select study track"
+            aria-expanded={trackDropdownOpen}
+          >
+            <span className="track-pill-label">{selectedTrack}</span>
+            <ChevronDown size={14} className={`track-pill-chevron ${trackDropdownOpen ? 'rotate' : ''}`} />
+          </button>
+
+          {trackDropdownOpen && (
+            <div className="dropdown-panel track-dropdown-panel glass-card" role="menu">
+              {['3D', 'Web Dev', 'AI & Data', 'Computer Science'].map(track => (
+                <button 
+                  key={track}
+                  className={`track-dropdown-item ${selectedTrack === track ? 'active' : ''}`}
+                  onClick={() => {
+                    setSelectedTrack(track);
+                    setTrackDropdownOpen(false);
+                  }}
+                >
+                  <span>{track}</span>
+                  {selectedTrack === track && <span className="track-check-dot" />}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Reference Orange Circular Chat / AI Button */}
+        <button 
+          className="header-ai-chat-btn"
+          onClick={() => {
+            if (onNavigate) onNavigate('ai');
+          }}
+          title="Ask AI Student Assistant"
+          aria-label="Open AI Assistant"
+        >
+          <MessageSquare size={17} />
+        </button>
+
         {/* Notifications Button & Dropdown */}
         <div className="header-action-wrapper" ref={notifRef}>
           <button 
@@ -322,7 +366,7 @@ export default function Header({
             aria-label="Notifications"
             aria-expanded={notificationsOpen}
           >
-            <Bell size={20} />
+            <Bell size={18} />
             {unreadCount > 0 && (
               <span className="notif-badge">{unreadCount}</span>
             )}
@@ -403,13 +447,17 @@ export default function Header({
             aria-expanded={profileOpen}
           >
             <div className="header-avatar">
-              {user?.name ? user.name.slice(0, 2).toUpperCase() : 'AS'}
+              {user?.avatar ? (
+                <img src={user.avatar} alt="Profile" className="header-avatar-img" />
+              ) : (
+                <span>{user?.name ? user.name.slice(0, 2).toUpperCase() : 'JL'}</span>
+              )}
             </div>
             <div className="header-profile-meta">
-              <span className="profile-name">{studentFirstName}</span>
-              <span className="profile-badge-sem">Sem 4</span>
+              <span className="profile-name">{user?.name || 'Jane London'}</span>
+              <span className="profile-location">{user?.location || 'New York, USA'}</span>
             </div>
-            <ChevronDown size={15} className={`chevron-icon ${profileOpen ? 'rotate' : ''}`} />
+            <ChevronDown size={14} className={`chevron-icon ${profileOpen ? 'rotate' : ''}`} />
           </button>
 
           {/* Profile Dropdown Panel */}

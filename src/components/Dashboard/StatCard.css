@@ -6,7 +6,7 @@
   gap: 0.85rem;
   position: relative;
   overflow: hidden;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xs);

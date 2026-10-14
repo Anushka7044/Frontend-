@@ -15,22 +15,22 @@
   align-items: center;
   gap: 0.65rem;
   padding: 0.7rem 1.2rem 0.7rem 0.85rem;
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, var(--primary) 0%, #6A56E8 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-full);
   color: #FFFFFF;
   font-family: var(--font-family);
   font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 18px rgba(79, 70, 229, 0.35);
+  box-shadow: 0 4px 18px rgba(136, 117, 255, 0.35);
   transition: all var(--transition-fast);
   position: relative;
 }
 
 .ai-floating-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.45);
+  box-shadow: 0 8px 24px rgba(136, 117, 255, 0.45);
 }
 
 .ai-floating-icon {
@@ -60,7 +60,7 @@
   width: 380px;
   height: 520px;
   max-height: 85vh;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
@@ -73,7 +73,7 @@
 /* Header */
 .ai-panel-header {
   padding: 0.85rem 1.15rem;
-  background: #FAFAFA;
+  background: #14192D;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@
   width: 34px;
   height: 34px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, #4F46E5, #7C3AED);
+  background: linear-gradient(135deg, var(--primary), #6A56E8);
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -140,7 +140,7 @@
 }
 
 .ai-tool-btn:hover {
-  background: #F1F5F9;
+  background: #1C233C;
   color: var(--text-main);
 }
 
@@ -180,11 +180,11 @@
   background: var(--primary);
   color: #FFFFFF;
   border-bottom-right-radius: 4px;
-  box-shadow: 0 1px 3px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 1px 3px rgba(136, 117, 255, 0.25);
 }
 
 .ai-message-row.ai .ai-message-bubble {
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   color: var(--text-main);
   border-bottom-left-radius: 4px;
@@ -204,7 +204,7 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   padding: 0.6rem 0.85rem;
   border-radius: var(--radius-lg);
@@ -215,7 +215,7 @@
   width: 6px;
   height: 6px;
   border-radius: var(--radius-full);
-  background: #A5B4FC;
+  background: var(--primary);
   animation: typingBounce 1.4s infinite ease-in-out;
 }
 
@@ -230,7 +230,7 @@
 /* Prompts Section */
 .ai-prompts-section {
   padding: 0.65rem 0.85rem;
-  background: #FAFAFA;
+  background: #14192D;
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -256,8 +256,8 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0.25rem 0.55rem;
-  background: var(--primary-light);
-  border: 1px solid var(--primary-light-border);
+  background: rgba(136, 117, 255, 0.15);
+  border: 1px solid rgba(136, 117, 255, 0.25);
   color: var(--primary);
   font-size: 0.72rem;
   font-weight: 600;
@@ -268,8 +268,8 @@
 }
 
 .prompt-chip:hover {
-  background: #E0E7FF;
-  border-color: #A5B4FC;
+  background: rgba(136, 117, 255, 0.25);
+  border-color: rgba(136, 117, 255, 0.4);
 }
 
 .chip-sparkle {
@@ -279,7 +279,7 @@
 /* Input Form */
 .ai-input-form {
   padding: 0.65rem 0.85rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -288,7 +288,7 @@
 
 .ai-text-input {
   flex: 1;
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   border-radius: var(--radius-full);
   padding: 0.5rem 0.85rem;
@@ -301,8 +301,8 @@
 
 .ai-text-input:focus {
   border-color: var(--primary);
-  background: #FFFFFF;
-  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.12);
+  background: #14192D;
+  box-shadow: 0 0 0 2px rgba(136, 117, 255, 0.2);
 }
 
 .ai-send-btn {

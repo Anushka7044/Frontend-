@@ -24,13 +24,16 @@
   color: #EF4444;
 }
 
+/* Input Container Wrapper */
 .input-wrapper {
   position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   background: #F8FAFC;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
+  box-sizing: border-box;
   transition: all var(--transition-fast);
 }
 
@@ -45,78 +48,131 @@
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12);
 }
 
-.input-icon-left {
+/* Leading Decorative Icon: Vertically centered & non-blocking */
+.input-icon-left,
+.input-wrapper .input-icon-left {
   position: absolute;
-  left: 1rem;
+  left: 0.95rem;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--text-subtle);
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  z-index: 2;
 }
 
+/* Form Input: Explicit height, proper padding, overriding generic index.css rules */
+.input-wrapper .form-input,
 .form-input {
+  box-sizing: border-box;
   width: 100%;
-  padding: 0.82rem 1rem 0.82rem 2.75rem;
+  min-width: 0;
+  min-height: 46px;
+  height: 46px;
+  padding: 0.7rem 1rem 0.7rem 2.85rem;
   background: transparent;
   border: none;
-  color: var(--text-main);
-  font-family: var(--font-family);
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.form-input::placeholder {
-  color: var(--text-subtle);
-}
-
-.form-input.password-input {
-  padding-right: 2.75rem;
-}
-
-.form-select {
-  width: 100%;
-  padding: 0.82rem 2.5rem 0.82rem 2.75rem;
-  background: #F8FAFC;
-  border: 1px solid var(--border);
   border-radius: var(--radius-md);
   color: var(--text-main);
   font-family: var(--font-family);
   font-size: 0.95rem;
+  line-height: 1.4;
   outline: none;
+  box-shadow: none;
+}
+
+.input-wrapper .form-input:focus,
+.form-input:focus {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.input-wrapper .form-input::placeholder,
+.form-input::placeholder {
+  color: var(--text-subtle);
+  opacity: 1;
+}
+
+/* Password Input: Reserve right padding for the toggle button */
+.input-wrapper .form-input.password-input,
+.form-input.password-input {
+  padding-right: 2.85rem;
+}
+
+/* Form Select inside .input-wrapper: Transparent background to avoid double borders */
+.input-wrapper .form-select,
+.form-select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  height: 46px;
+  padding: 0.7rem 2.25rem 0.7rem 2.85rem;
+  background-color: transparent;
+  border: none;
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  outline: none;
+  box-shadow: none;
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 1rem center;
+  background-position: right 0.85rem center;
+  background-size: 16px 16px;
   transition: all var(--transition-fast);
 }
 
+.input-wrapper .form-select option,
 .form-select option {
   background: #FFFFFF;
   color: var(--text-main);
 }
 
+.input-wrapper .form-select:focus,
 .form-select:focus {
-  background: #FFFFFF;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
-.password-toggle-btn {
+/* Trailing Action: Password Visibility Toggle Button */
+.password-toggle-btn,
+.input-wrapper .password-toggle-btn {
   position: absolute;
-  right: 0.75rem;
+  right: 0.65rem;
+  top: 50%;
+  transform: translateY(-50%);
   background: transparent;
   border: none;
   color: var(--text-subtle);
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: color var(--transition-fast);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
 }
 
-.password-toggle-btn:hover {
+.password-toggle-btn:hover,
+.input-wrapper .password-toggle-btn:hover {
   color: var(--text-main);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .form-error-msg {

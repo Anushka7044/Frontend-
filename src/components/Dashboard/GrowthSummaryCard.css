@@ -19,7 +19,7 @@
 }
 
 .growth-tally-box {
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 0.75rem 0.5rem;
@@ -32,8 +32,8 @@
 
 .growth-tally-box:hover {
   transform: translateY(-2px);
-  background: #FFFFFF;
-  border-color: var(--border-hover);
+  background: #1C233C;
+  border-color: rgba(136, 117, 255, 0.3);
   box-shadow: var(--shadow-xs);
 }
 
@@ -52,8 +52,8 @@
 }
 
 .growth-quote-banner {
-  background: linear-gradient(135deg, #EEF2FF 0%, #F5F3FF 100%);
-  border: 1px solid #C7D2FE;
+  background: linear-gradient(135deg, rgba(136, 117, 255, 0.12) 0%, rgba(64, 217, 194, 0.05) 100%), #14192D;
+  border: 1px solid rgba(136, 117, 255, 0.25);
   border-radius: var(--radius-md);
   padding: 1rem 1.25rem;
   display: flex;

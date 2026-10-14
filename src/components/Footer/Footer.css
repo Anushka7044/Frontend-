@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .footer-wrapper {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border-top: 1px solid var(--border);
   padding-top: 4.5rem;
 }
@@ -44,7 +44,7 @@
   width: 2.35rem;
   height: 2.35rem;
   border-radius: var(--radius-sm);
-  background: #F8FAFC;
+  background: #14192D;
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -54,9 +54,9 @@
 }
 
 .social-icon-btn:hover {
-  background: #EEF2FF;
-  color: var(--primary);
-  border-color: #C7D2FE;
+  background: var(--bg-surface-elevated);
+  color: var(--accent-primary);
+  border-color: rgba(136, 117, 255, 0.4);
 }
 
 .footer-col-title {
@@ -86,13 +86,13 @@
 }
 
 .footer-links button:hover {
-  color: var(--primary);
+  color: var(--accent-primary);
 }
 
 .footer-bottom-bar {
   border-top: 1px solid var(--border);
   padding: 1.5rem 0;
-  background: #F8FAFC;
+  background: #101426;
 }
 
 .bottom-bar-flex {

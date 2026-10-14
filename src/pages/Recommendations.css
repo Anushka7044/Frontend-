@@ -61,7 +61,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -80,8 +80,8 @@
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--primary);
-  background: #EEF2FF;
-  border: 1px solid #C7D2FE;
+  background: rgba(136, 117, 255, 0.15);
+  border: 1px solid rgba(136, 117, 255, 0.25);
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-full);
 }
@@ -236,7 +236,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.1rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -245,7 +245,7 @@
 
 .recommendation-card-item:hover {
   transform: translateY(-2px);
-  border-color: #C7D2FE;
+  border-color: rgba(136, 117, 255, 0.4);
   box-shadow: var(--shadow-md);
 }
 
@@ -402,7 +402,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(10, 13, 24, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   display: flex;
@@ -417,18 +417,18 @@
   max-width: 600px;
   width: 100%;
   max-height: 85vh;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
 }
 
 .rec-modal-header {
   padding: 1.25rem 1.5rem;
-  background: #FFFFFF;
+  background: #14192D;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;

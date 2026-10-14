@@ -261,7 +261,7 @@ export default function Signup({ onNavigate, onSignupSuccess }) {
               <label htmlFor="signup-year" className="form-label">
                 Current Year <span className="required-star">*</span>
               </label>
-              <div className="input-wrapper">
+              <div className={`input-wrapper ${errors.year ? 'input-error-border' : ''}`}>
                 <Calendar size={18} className="input-icon-left" />
                 <select
                   id="signup-year"
@@ -275,13 +275,14 @@ export default function Signup({ onNavigate, onSignupSuccess }) {
                   ))}
                 </select>
               </div>
+              {errors.year && <p className="form-error-msg">{errors.year}</p>}
             </div>
 
             <div className="form-group">
               <label htmlFor="signup-semester" className="form-label">
                 Semester <span className="required-star">*</span>
               </label>
-              <div className="input-wrapper">
+              <div className={`input-wrapper ${errors.semester ? 'input-error-border' : ''}`}>
                 <GraduationCap size={18} className="input-icon-left" />
                 <select
                   id="signup-semester"
@@ -295,6 +296,7 @@ export default function Signup({ onNavigate, onSignupSuccess }) {
                   ))}
                 </select>
               </div>
+              {errors.semester && <p className="form-error-msg">{errors.semester}</p>}
             </div>
           </div>
 

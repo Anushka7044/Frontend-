@@ -13,7 +13,7 @@
 
 /* Hero Banner Card */
 .profile-hero-card {
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -23,7 +23,7 @@
 
 .profile-banner-bg {
   height: 140px;
-  background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 50%, #C7D2FE 100%);
+  background: linear-gradient(135deg, rgba(136, 117, 255, 0.25) 0%, rgba(64, 217, 194, 0.15) 100%), #14192D;
   position: relative;
 }
 
@@ -37,15 +37,15 @@
   width: 110px;
   height: 110px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, #4F46E5, #0284C7);
-  border: 4px solid #FFFFFF;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  border: 4px solid var(--bg-card);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
   font-weight: 700;
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+  box-shadow: 0 6px 20px rgba(136, 117, 255, 0.3);
 }
 
 .profile-hero-body {
@@ -100,13 +100,13 @@
   gap: 0.75rem;
   flex-wrap: wrap;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border);
 }
 
 .social-link-chip {
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
-  background: #F8FAFC;
+  background: #14192D;
   color: var(--text-muted);
   border: 1px solid var(--border);
   font-size: 0.8rem;
@@ -118,9 +118,9 @@
 }
 
 .social-link-chip:hover {
-  background: #EEF2FF;
+  background: #1C233C;
   color: var(--primary);
-  border-color: #C7D2FE;
+  border-color: rgba(136, 117, 255, 0.4);
 }
 
 /* 2-Column Middle Grid: Career Readiness & Profile Completeness */
@@ -133,7 +133,7 @@
 /* Career Readiness Card */
 .readiness-card {
   padding: 1.75rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -221,7 +221,7 @@
 /* Profile Completion Card */
 .completeness-profile-card {
   padding: 1.75rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -246,14 +246,14 @@
   width: 58px;
   height: 58px;
   border-radius: var(--radius-full);
-  background: #ECFDF5;
-  border: 2px solid #10B981;
+  background: rgba(64, 217, 194, 0.12);
+  border: 2px solid #40D9C2;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.35rem;
   font-weight: 700;
-  color: #059669;
+  color: #40D9C2;
   flex-shrink: 0;
 }
 
@@ -272,14 +272,14 @@
 }
 
 .profile-check-row.completed {
-  color: #059669;
+  color: #40D9C2;
   font-weight: 500;
 }
 
 /* Career Preparation Checklist (Requirement 24) */
 .career-checklist-section {
   padding: 1.75rem;
-  background: #FFFFFF;
+  background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
@@ -313,7 +313,7 @@
 
 .career-check-card {
   padding: 1.1rem;
-  background: #F8FAFC;
+  background: var(--bg-card-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   display: flex;
@@ -324,14 +324,14 @@
 }
 
 .career-check-card:hover {
-  border-color: #C7D2FE;
-  background: #FFFFFF;
+  border-color: rgba(136, 117, 255, 0.3);
+  background: #1C233C;
   box-shadow: var(--shadow-sm);
 }
 
 .career-check-card.done {
-  border-color: #A7F3D0;
-  background: #F0FDF4;
+  border-color: rgba(64, 217, 194, 0.35);
+  background: rgba(64, 217, 194, 0.06);
 }
 
 .check-card-top {
